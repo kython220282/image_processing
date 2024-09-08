@@ -33,7 +33,7 @@ st.write('----------------')
 
 col1, col2 = st.columns(2)
 with col1:
-    st.header("Uploaded Image")
+    st.subheader("Uploaded Image")
     if uploaded_file is not None:
         try:
             # Read the image file
@@ -59,7 +59,7 @@ with col1:
         st.write("Please upload an image")
 
 with col2:
-    st.write("Select processed image dimensions")
+    st.subheader("Select processed image dimensions")
     if uploaded_file is not None:
         # Input for desired width and height in inches
         width_inches = st.number_input("Desired width (inches)", min_value=0.1, max_value=100.0, value=original_width_inches, step=0.1)
