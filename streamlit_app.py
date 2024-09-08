@@ -26,14 +26,14 @@ def hd_sharpen(image, amount):
 
 st.title('🎈 Image Processing Application')
 
-st.write('Open source application designed to different Image processing task')
+st.subheader('Open source application designed to different Image processing task')
 st.write('----------------')
 
 col1, col2 = st.columns(2)
 with col1:
     uploaded_file = st.file_uploader("Choose a png or jpg file", type=['png', 'jpg'] )
 with col2:
-    st.write("Select processed image dimensions")
+    st.subheader("Select processed image dimensions")
     
 st.write('----------------')
 
@@ -45,8 +45,10 @@ with col1:
             # Read the image file
             image_bytes = uploaded_file.read()
             image = Image.open(io.BytesIO(image_bytes))
+           
             # Convert to numpy array
             image_array = np.array(image)
+            
             # Display the uploaded image
             st.image(image, caption='Uploaded Image', use_column_width=True)
             
