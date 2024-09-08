@@ -65,7 +65,7 @@ with col1:
         sharpen_amount = st.slider("HD Sharpening amount", min_value=0.0, max_value=2.0, value=0.0, step=0.1)
         
         # Process Image button
-        process_button = st.button('Process Image')
+        process_button = st.button('Process Image',type="primary")
 
 with col2:
     st.subheader("Uploaded Image")
