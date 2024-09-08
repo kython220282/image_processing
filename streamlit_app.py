@@ -54,7 +54,7 @@ with col2:
             original_height_inches = image.height / 96
             st.write(f"Original size: {original_width_inches:.2f} x {original_height_inches:.2f} inchs (at 96 DPI)")
             # Display the uploaded image
-            st.image(image, caption='Uploaded Image', use_column_width=True)
+            st.image(image, use_column_width=True)
         except Exception as e:
             st.error(f"Error opening the image: {e}")
     else:
