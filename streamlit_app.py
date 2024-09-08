@@ -22,19 +22,13 @@ def hd_sharpen(image, amount):
     sharpened = np.clip(sharpened, 0, 1)
     return (sharpened * 255).astype(np.uint8)
 
-
-
 st.title('🎈 Image Processing Application')
 
 st.write('Open source application designed to different Image processing task')
 st.write('----------------')
 
-col1, col2 = st.columns(2)
-with col1:
-    uploaded_file = st.file_uploader("Choose a png or jpg file", type=['png', 'jpg'] )
-with col2:
-    st.write("Select processed image dimensions")
-    
+uploaded_file = st.file_uploader("Choose a png or jpg file", type=['png', 'jpg'] )
+   
 st.write('----------------')
 
 col1, col2 = st.columns(2)
@@ -65,5 +59,16 @@ with col1:
         st.write("Please upload an image")
 
 with col2:
-    st.header("Processed Image")
+    st.write("Select processed image dimensions")
+    if uploaded_file is not None:
+        # Input for desired width and height in inches
+        width_inches = st.number_input("Desired width (inches)", min_value=0.1, max_value=100.0, value=original_width_inches, step=0.1)
+        height_inches = st.number_input("Desired height (inches)", min_value=0.1, max_value=100.0, value=original_height_inches, step=0.1)
+        
+        # Input for DPI
+        dpi = st.number_input("DPI (dots per inch)", min_value=1, max_value=1200, value=96, step=1)
+        
+        # HD Sharpening amount input
+        sharpen_amount = st.slider("HD Sharpening amount", min_value=0.0, max_value=2.0, value=0.0, step=0.1)
+
   
