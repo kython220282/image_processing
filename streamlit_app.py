@@ -92,12 +92,12 @@ with col3:
             else:
                 processed_image = scaled_image
             
-            # Display the processed image
-            st.image(processed_image, use_column_width=True)
-            
             # Display new dimensions
             st.write(f"New dimensions: {processed_image.shape[1]} x {processed_image.shape[0]} pixels")
             st.write(f"New size: {width_inches:.2f} x {height_inches:.2f} inches (at {dpi} DPI)")
+            
+            # Display the processed image
+            st.image(processed_image, use_column_width=True)
         except Exception as e:
             st.error(f"Error processing the image: {e}")
     elif uploaded_file is None:
