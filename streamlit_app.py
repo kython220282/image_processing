@@ -6,6 +6,7 @@ from PIL import Image
 import io
 
 
+st.set_page_config(layout="wide")
 def scale_image_inches(image, width_inches, height_inches, dpi):
     # Calculate target dimensions in pixels
     width_pixels = int(width_inches * dpi)
@@ -26,13 +27,15 @@ st.title('🎈 Image Processing Application')
 
 st.write('Open source application designed to different Image processing task')
 st.write('----------------')
+ 
+col1, col2, col3 = st.columns(3)
 
-uploaded_file = st.file_uploader("Choose a png or jpg file", type=['png', 'jpg'] )
-   
-st.write('----------------')
-
-col1, col2 = st.columns(2)
 with col1:
+    st.subheader("Upload Image")
+    uploaded_file = st.file_uploader("Choose a png or jpg file", type=['png', 'jpg'] )
+    
+
+with col2:
     st.subheader("Uploaded Image")
     if uploaded_file is not None:
         try:
@@ -58,7 +61,7 @@ with col1:
     else:
         st.write("Please upload an image")
 
-with col2:
+with col3:
     st.subheader("Select processed image dimensions")
     if uploaded_file is not None:
         # Input for desired width and height in inches
