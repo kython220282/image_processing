@@ -73,3 +73,4 @@ with col2:
         st.write("Please upload an image")
 
 with col3:
+    st.subheader("Processed Image")
