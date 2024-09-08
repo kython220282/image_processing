@@ -3,6 +3,8 @@ import cv2
 import matplotlib.pyplot as plt 
 import numpy as np 
 
+st.set_page_config(layout="wide")
+
 st.title('🎈 Image Processing Application')
 
 st.write('Open source application designed to different Image processing task')
