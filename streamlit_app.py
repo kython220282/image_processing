@@ -29,7 +29,16 @@ st.title('🎈 Image Processing Application')
 st.write('Open source application designed to different Image processing task')
 st.write('----------------')
 
-uploaded_file = st.file_uploader("Choose a png or jpg file", type=['png', 'jpg'] )
+col1, col2 = st.columns(2)
+with col1:
+    uploaded_file = st.file_uploader("Choose a png or jpg file", type=['png', 'jpg'] )
+with col2:
+    st.header("Select processed image dimensions")
+    width_inches = st.number_input("Desired width (inches)", min_value=0.1, max_value=100.0, value=original_width_inches, step=0.1)
+    height_inches = st.number_input("Desired height (inches)", min_value=0.1, max_value=100.0, value=original_height_inches, step=0.1)
+
+
+st.write('----------------')
 
 col1, col2 = st.columns(2)
 with col1:
