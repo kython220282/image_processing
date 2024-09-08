@@ -14,12 +14,16 @@ uploaded_file = st.file_uploader("Choose a png or jpg file", type=['png', 'jpg']
 
 col1, col2 = st.columns(2)
 with col1:
-    st.header("Image Uploaded")
+    st.header("Uploaded Image")
     if uploaded_file is not None:
-        # Read the image file
-        image = Image.open(uploaded_file)
-        # Display the uploaded image
-        st.image(image, caption='Uploaded Image', use_column_width=True)
+        try:
+            # Read the image file
+            image_bytes = uploaded_file.read()
+            image = Image.open(io.BytesIO(image_bytes))
+            # Display the uploaded image
+            st.image(image, caption='Uploaded Image', use_column_width=True)
+        except Exception as e:
+            st.error(f"Error opening the image: {e}")
     else:
         st.write("Please upload an image")
 
