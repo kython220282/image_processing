@@ -23,7 +23,7 @@ def hd_sharpen(image, amount):
     return (sharpened * 255).astype(np.uint8)
 
 st.title('🎈 Image Processing Application')
-st.write('Open source application designed for different Image processing tasks')
+st.write('This app allows users to enhance and scale their images with precision. It enables the resizing of images based on target dimensions in inches, while taking into account the desired DPI (dots per inch) to ensure the resized image maintains clarity and detail. Additionally, the app applies an advanced sharpening technique, which first smooths the image using a Gaussian blur and then amplifies the image's fine details by adding back the sharpened elements. This process results in a high-definition output that is both sharp and visually appealing.')
 st.write('----------------')
 
 col1, col2, col3 = st.columns(3)
