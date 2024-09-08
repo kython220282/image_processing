@@ -60,7 +60,7 @@ with col1:
         height_inches = st.number_input("Desired height (inches)", min_value=0.1, max_value=100.0, value=original_height_inches, step=0.1)
         
         # Input for DPI
-        dpi = st.number_input("DPI (dots per inch)", min_value=1, max_value=1200, value=96, step=1)
+        dpi = st.number_input("DPI (dots per inch)", min_value=1, max_value=300, value=96, step=1)
         
         # HD Sharpening amount input
         sharpen_amount = st.slider("HD Sharpening amount", min_value=0.0, max_value=2.0, value=0.0, step=0.1)
