@@ -36,7 +36,7 @@ original_width_inches = 0
 original_height_inches = 0
 
 with col1:
-    st.subheader("Upload Image")
+    st.subheader("Step 1: Upload Image")
     uploaded_file = st.file_uploader("Choose a png or jpg file", type=['png', 'jpg'])
     
     if uploaded_file is not None:
@@ -54,7 +54,8 @@ with col1:
     
     
     if uploaded_file is not None:
-        st.subheader("Select processing dimensions")
+        st.write('----------------')
+        st.subheader("Step 2: Select processing dimensions")
         # Input for desired width and height in inches
         width_inches = st.number_input("Desired width (inches)", min_value=0.1, max_value=100.0, value=original_width_inches, step=0.1)
         height_inches = st.number_input("Desired height (inches)", min_value=0.1, max_value=100.0, value=original_height_inches, step=0.1)
