@@ -50,7 +50,7 @@ with col1:
             # Estimate original size in inches (assuming 96 DPI)
             original_width_inches = image.width / 96
             original_height_inches = image.height / 96
-            st.write(f"Estimated original size: {original_width_inches:.2f} x {original_height_inches:.2f} inches (at 96 DPI)")
+            st.write(f"Original size: {original_width_inches:.2f} x {original_height_inches:.2f} inchs (at 96 DPI)")
         except Exception as e:
             st.error(f"Error opening the image: {e}")
     else:
