@@ -1,25 +1,11 @@
-# 📦 Streamlit App Starter Kit 
+# Image Processing App 🖼️
 ```
 ⬆️ (Replace above with your app's name)
 ```
 
-Description of the app ...
+The app provides precise image enhancement and scaling capabilities. Users can resize images based on specific inch dimensions, considering the desired DPI for clear and detailed results. Additionally, it incorporates an advanced sharpening technique involving Gaussian blur and fine detail amplification, producing sharp, visually appealing high-definition images. hashtag#ImageProcessing hashtag#OpenCV2 hashtag#AppDevelopment hashtag#streamlit
 
 ## Demo App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://krs-imageprocessing.streamlit.app/)
 
-## GitHub Codespaces
-
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/app-starter-kit?quickstart=1)
-
-## Section Heading
-
-This is filler text, please replace this with text for this section.
-
-## Further Reading
-
-This is filler text, please replace this with a explanatory text about further relevant resources for this repo
-- Resource 1
-- Resource 2
-- Resource 3
